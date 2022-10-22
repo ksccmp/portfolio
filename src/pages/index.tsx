@@ -1,7 +1,7 @@
-import * as React from 'react';
-import { NextPage } from 'next';
-import Head from 'next/head';
+import React from 'react';
 
+import Head from 'next/head';
+import { NextPage } from 'next';
 
 const Index: NextPage = () => {
     return (
@@ -10,9 +10,7 @@ const Index: NextPage = () => {
                 <title>init_typescript</title>
             </Head>
 
-            <div>
-                index page!!
-            </div>
+            <div>index page!!</div>
         </>
     );
 };
