@@ -5,5 +5,11 @@ declare module '@emotion/react' {
         color: {
             primary: string;
         };
+
+        screen: {
+            fold: boolean;
+            mobile: boolean;
+            desktop: boolean;
+        };
     }
 }

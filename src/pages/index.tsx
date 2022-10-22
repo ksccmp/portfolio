@@ -4,6 +4,7 @@ import Head from 'next/head';
 import styled from '@emotion/styled';
 
 import { getImage } from '@src/utils/getImage';
+import Fold from '@src/components/molecules/screen/fold';
 import { Icon } from '@src/components/atoms/icon';
 
 const Index = () => {
@@ -17,6 +18,8 @@ const Index = () => {
                 <Header>
                     <Icon src={getImage('BACKGROUND')} width="100%" height="100%" />
                 </Header>
+
+                <Fold>fold</Fold>
             </Wrapper>
         </>
     );
