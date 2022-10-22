@@ -4,6 +4,7 @@ import Head from 'next/head';
 import styled from '@emotion/styled';
 
 import { getImage } from '@src/utils/getImage';
+import Profile from '@src/components/introduce/profile';
 import Text from '@src/components/atoms/text';
 import Icon from '@src/components/atoms/icon';
 
@@ -19,11 +20,9 @@ const Index = () => {
                     <Icon src={getImage('BACKGROUND')} width="100%" height="100%" />
                 </Header>
 
-                <ContentsArticle>
-                    <Text color="grayscale100" size="large" weight="bold">
-                        안녕하세요
-                    </Text>
-                </ContentsArticle>
+                <IntroduceArticle>
+                    <Profile />
+                </IntroduceArticle>
             </Wrapper>
         </>
     );
@@ -37,7 +36,7 @@ const Header = styled.header`
     height: 328px;
 `;
 
-const ContentsArticle = styled.article`
+const IntroduceArticle = styled.article`
     width: 100%;
     max-width: 728px;
 
