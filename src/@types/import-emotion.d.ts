@@ -2,8 +2,20 @@ import '@emotion/react';
 
 declare module '@emotion/react' {
     export interface Theme {
+        font: {
+            size: {
+                small: string;
+                medium: string;
+                large: string;
+            };
+
+            weight: {
+                bold: number;
+            };
+        };
+
         color: {
-            primary: string;
+            grayscale100: string;
         };
 
         screen: {

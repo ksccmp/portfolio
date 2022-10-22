@@ -6,7 +6,7 @@ interface Props {
     height?: number | string;
 }
 
-export const Icon = styled.img<Props>`
+const Icon = styled.img<Props>`
     ${(props) => {
         switch (typeof props.width) {
             case 'number':
@@ -35,3 +35,5 @@ export const Icon = styled.img<Props>`
         }
     }}
 `;
+
+export default Icon;
