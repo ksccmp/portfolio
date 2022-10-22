@@ -14,6 +14,9 @@ const GlobalStyle = () => {
                 }
 
                 body {
+                    margin: 0;
+                    padding: 0;
+
                     font-family: 'noto sans';
                 }
             `}
