@@ -8,19 +8,24 @@ import TextBoxFormControl from '../molecules/textBoxFormControl';
 import CssStackModal from '../organisms/modal/CssStackModal';
 import HtmlStackModal from '../organisms/modal/HtmlStackModal';
 import JavaScriptStackModal from '../organisms/modal/JavaScriptStackModal';
+import JpaStackModal from '../organisms/modal/JpaStackModal';
 import NextStackModal from '../organisms/modal/NextStackModal';
 import ReactStackModal from '../organisms/modal/ReactStackModal';
 import SpringBootStackModal from '../organisms/modal/SpringBootStackModal';
 import TypeScriptStackModal from '../organisms/modal/TypeScriptStackModal';
 
 const Stack = () => {
+    // FrontEnd
     const REACT_STACK_MODAL = 'REACT_STACK_MODAL';
     const NEXT_STACK_MODAL = 'NEXT_STACK_MODAL';
     const TYPESCRIPT_STACK_MODAL = 'TYPESCRIPT_STACK_MODAL';
     const JAVASCRIPT_STACK_MODAL = 'JAVASCRIPT_STACK_MODAL';
     const HTML_STACK_MODAL = 'HTML_STACK_MODAL';
     const CSS_STACK_MODAL = 'CSS_STACK_MODAL';
+
+    // BackEnd
     const SPRINGBOOT_STACK_MODAL = 'SPRINGBOOT_STACK_MODAL';
+    const JPA_STACK_MODAL = 'JPA_STACK_MODAL';
 
     /**
      * customHook
@@ -44,7 +49,7 @@ const Stack = () => {
                 <Dropdown label="BackEnd" open={false}>
                     <Container>
                         <TextBoxFormControl label="SpringBoot" onClick={() => useModal.open(SPRINGBOOT_STACK_MODAL)} />
-                        <TextBoxFormControl label="JPA" />
+                        <TextBoxFormControl label="JPA" onClick={() => useModal.open(JPA_STACK_MODAL)} />
                         <TextBoxFormControl label="QueryDSL" />
                         <TextBoxFormControl label="MyBatis" />
                     </Container>
@@ -99,6 +104,7 @@ const Stack = () => {
             {useModal.isOpen(SPRINGBOOT_STACK_MODAL) && (
                 <SpringBootStackModal onClose={() => useModal.close(SPRINGBOOT_STACK_MODAL)} />
             )}
+            {useModal.isOpen(JPA_STACK_MODAL) && <JpaStackModal onClose={() => useModal.close(JPA_STACK_MODAL)} />}
         </>
     );
 };
