@@ -4,9 +4,14 @@ declare module '@emotion/react' {
     export interface Theme {
         font: {
             size: {
-                small: string;
-                medium: string;
+                '4xLarge': string;
+                '3xLarge': string;
+                '2xLarge': string;
+                xLarge: string;
                 large: string;
+                medium: string;
+                small: string;
+                xSmall: string;
             };
 
             weight: {

@@ -3,9 +3,14 @@ import { Theme } from '@emotion/react';
 const theme: Theme = {
     font: {
         size: {
+            '4xLarge': '36px',
+            '3xLarge': '24px',
+            '2xLarge': '20px',
+            xLarge: '18px',
+            large: '16px',
+            medium: '14px',
             small: '12px',
-            medium: '16px',
-            large: '24px',
+            xSmall: '10px',
         },
 
         weight: {
