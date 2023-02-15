@@ -7,10 +7,12 @@ import Dropdown from '../molecules/drowndown';
 import TextBoxFormControl from '../molecules/textBoxFormControl';
 import NextStackModal from '../organisms/modal/NextStackModal';
 import ReactStackModal from '../organisms/modal/ReactStackModal';
+import TypeScriptStackModal from '../organisms/modal/TypeScriptStackModal';
 
 const Stack = () => {
     const REACT_STACK_MODAL = 'REACT_STACK_MODAL';
     const NEXT_STACK_MODAL = 'NEXT_STACK_MODAL';
+    const TYPESCRIPT_STACK_MODAL = 'TYPESCRIPT_STACK_MODAL';
 
     /**
      * customHook
@@ -24,7 +26,7 @@ const Stack = () => {
                     <Container>
                         <TextBoxFormControl label="React" onClick={() => useModal.open(REACT_STACK_MODAL)} />
                         <TextBoxFormControl label="Next" onClick={() => useModal.open(NEXT_STACK_MODAL)} />
-                        <TextBoxFormControl label="TypeScript" />
+                        <TextBoxFormControl label="TypeScript" onClick={() => useModal.open(TYPESCRIPT_STACK_MODAL)} />
                         <TextBoxFormControl label="JavaScript" />
                         <TextBoxFormControl label="HTML" />
                         <TextBoxFormControl label="CSS" />
@@ -75,6 +77,9 @@ const Stack = () => {
                 <ReactStackModal onClose={() => useModal.close(REACT_STACK_MODAL)} />
             )}
             {useModal.isOpen(NEXT_STACK_MODAL) && <NextStackModal onClose={() => useModal.close(NEXT_STACK_MODAL)} />}
+            {useModal.isOpen(TYPESCRIPT_STACK_MODAL) && (
+                <TypeScriptStackModal onClose={() => useModal.close(TYPESCRIPT_STACK_MODAL)} />
+            )}
         </>
     );
 };
