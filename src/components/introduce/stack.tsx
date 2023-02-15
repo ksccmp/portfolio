@@ -10,6 +10,7 @@ import HtmlStackModal from '../organisms/modal/HtmlStackModal';
 import JavaScriptStackModal from '../organisms/modal/JavaScriptStackModal';
 import JpaStackModal from '../organisms/modal/JpaStackModal';
 import NextStackModal from '../organisms/modal/NextStackModal';
+import QueryDslStackModal from '../organisms/modal/QueryDslStackModal';
 import ReactStackModal from '../organisms/modal/ReactStackModal';
 import SpringBootStackModal from '../organisms/modal/SpringBootStackModal';
 import TypeScriptStackModal from '../organisms/modal/TypeScriptStackModal';
@@ -26,6 +27,7 @@ const Stack = () => {
     // BackEnd
     const SPRINGBOOT_STACK_MODAL = 'SPRINGBOOT_STACK_MODAL';
     const JPA_STACK_MODAL = 'JPA_STACK_MODAL';
+    const QUERYDSL_STACK_MODAL = 'QUERYDSL_STACK_MODAL';
 
     /**
      * customHook
@@ -50,7 +52,7 @@ const Stack = () => {
                     <Container>
                         <TextBoxFormControl label="SpringBoot" onClick={() => useModal.open(SPRINGBOOT_STACK_MODAL)} />
                         <TextBoxFormControl label="JPA" onClick={() => useModal.open(JPA_STACK_MODAL)} />
-                        <TextBoxFormControl label="QueryDSL" />
+                        <TextBoxFormControl label="QueryDSL" onClick={() => useModal.open(QUERYDSL_STACK_MODAL)} />
                         <TextBoxFormControl label="MyBatis" />
                     </Container>
                 </Dropdown>
@@ -105,6 +107,9 @@ const Stack = () => {
                 <SpringBootStackModal onClose={() => useModal.close(SPRINGBOOT_STACK_MODAL)} />
             )}
             {useModal.isOpen(JPA_STACK_MODAL) && <JpaStackModal onClose={() => useModal.close(JPA_STACK_MODAL)} />}
+            {useModal.isOpen(QUERYDSL_STACK_MODAL) && (
+                <QueryDslStackModal onClose={() => useModal.close(QUERYDSL_STACK_MODAL)} />
+            )}
         </>
     );
 };
