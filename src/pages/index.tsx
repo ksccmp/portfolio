@@ -3,6 +3,7 @@ import Head from 'next/head';
 
 import Career from '@src/components/introduce/career';
 import Profile from '@src/components/introduce/profile';
+import Project from '@src/components/introduce/project';
 
 const Index = () => {
     return (
@@ -15,6 +16,7 @@ const Index = () => {
                 <IntroduceArticle>
                     <Profile />
                     <Career />
+                    <Project />
                 </IntroduceArticle>
             </Wrapper>
         </>

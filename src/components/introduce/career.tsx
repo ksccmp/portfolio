@@ -3,9 +3,9 @@ import ListItem from '../atoms/listItem';
 import Text from '../atoms/text';
 import ContentWrapper from '../molecules/introduce/contentWrapper';
 
-const Project = () => {
+const Career = () => {
     return (
-        <ContentWrapper label="📚 Project">
+        <ContentWrapper label="📚 Career">
             <List listStyleType="disc">
                 <ListItem>
                     <Text color="grayscale80" size="xLarge">
@@ -51,4 +51,4 @@ const Project = () => {
     );
 };
 
-export default Project;
+export default Career;

@@ -5,6 +5,7 @@ interface Props {
     width?: number | string;
     height?: number | string;
     radius?: number | string;
+    pointer?: boolean;
 }
 
 const Image = styled.img<Props>`
@@ -47,6 +48,14 @@ const Image = styled.img<Props>`
                 return css`
                     border-radius: ${props.radius};
                 `;
+        }
+    }}
+
+    ${(props) => {
+        if (props.pointer) {
+            return css`
+                cursor: pointer;
+            `;
         }
     }}
 `;
