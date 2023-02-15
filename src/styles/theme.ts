@@ -15,6 +15,15 @@ const theme: Theme = {
 
     color: {
         grayscale100: '#13161a',
+        grayscale90: '#222529',
+        grayscale80: '#36393e',
+        grayscale70: '#53575c',
+        grayscale60: '#767a80',
+        grayscale50: '#a4a8ae',
+        grayscale40: '#b3b6bc',
+        grayscale30: '#c2c5cb',
+        grayscale20: '#dee1e5',
+        grayscale10: '#f7f9fa',
     },
 
     screen: {
