@@ -9,7 +9,7 @@ interface Props {
     weight?: keyof typeof theme.font.weight;
 }
 
-const Text = styled.p<Props>`
+const Title = styled.h2<Props>`
     display: inline-block;
     word-break: keep-all;
 
@@ -38,4 +38,4 @@ const Text = styled.p<Props>`
     }}
 `;
 
-export default Text;
+export default Title;
