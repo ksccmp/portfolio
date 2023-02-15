@@ -21,7 +21,8 @@ const Project = () => {
                                 '개발된 컴포넌트들을 문서화하기 위해 Storybook을 사용했어요',
                                 '유효성 검증을 위해 React Hook Form과 Yup을 적용했어요',
                                 'UseMemo, UseCallback을 이용하여 렌더링 최적화를 적용했어요',
-                                'Lint, Prettier로 코드 포매팅, import/order, console 제거 등을 적용했어요',
+                                'Lint, Prettier로 코드 포매팅, import/order 등을 적용했어요',
+                                'Webpack을 이용하여 번들링을 하고있어요',
                             ]}
                         />
 
@@ -56,7 +57,8 @@ const Project = () => {
                                 '상태관리로 Redux를 활용했어요',
                                 'StyledComponents를 사용하여 CSS를 적용했어요',
                                 'LazyLoading을 이용하여 렌더링 최적화를 적용했어요',
-                                'Lint, Prettier로 코드 포매팅, console 제거 등을 적용했어요',
+                                'Lint, Prettier로 코드 포매팅을 적용했어요',
+                                'Webpack을 이용하여 번들링을 하고있어요',
                             ]}
                         />
 
