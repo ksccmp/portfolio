@@ -1,7 +1,5 @@
-import React from 'react';
-
-import reset from 'emotion-reset';
 import { css, Global } from '@emotion/react';
+import reset from 'emotion-reset';
 
 const GlobalStyle = () => {
     return (
@@ -17,7 +15,7 @@ const GlobalStyle = () => {
                     margin: 0;
                     padding: 0;
 
-                    font-family: 'noto sans';
+                    font-family: 'Pretendard';
                 }
             `}
         />
