@@ -13,6 +13,9 @@ const Text = styled.p<Props>`
     display: inline-block;
     word-break: keep-all;
 
+    letter-spacing: -0.64px;
+    line-height: 1.43;
+
     ${(props) => {
         if (props.color) {
             return css`
