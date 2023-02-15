@@ -3,6 +3,8 @@ import styled from '@emotion/styled';
 import { getImage } from '@src/utils/getImage';
 
 import Image from '../atoms/image';
+import List from '../atoms/list';
+import ListItem from '../atoms/listItem';
 import Text from '../atoms/text';
 import Title from '../atoms/title';
 
@@ -19,25 +21,25 @@ const Profile = () => {
                         김성찬, SeongChan Kim
                     </Title>
 
-                    <TextList>
-                        <TextItem>
+                    <List listStyleType="disc">
+                        <TextListItem>
                             <Text color="grayscale60" size="large">
                                 안녕하세요! FE 개발자로 꾸준하고 가파르게 성장하는 것을 목표로 하고 있는 김성찬입니다.
                             </Text>
-                        </TextItem>
+                        </TextListItem>
 
-                        <TextItem>
+                        <TextListItem>
                             <Text color="grayscale60" size="large">
                                 단 한줄의 코드도 다른 사람들이 이해할 수 있는 코드를 작성하려고 합니다.
                             </Text>
-                        </TextItem>
+                        </TextListItem>
 
-                        <TextItem>
+                        <TextListItem>
                             <Text color="grayscale60" size="large">
                                 혼자하는 것보다 협업하면서 개발하는 것을 즐깁니다.
                             </Text>
-                        </TextItem>
-                    </TextList>
+                        </TextListItem>
+                    </List>
                 </IntroduceHeader>
             </IntroduceSection>
         </Wrapper>
@@ -61,15 +63,7 @@ const IntroduceHeader = styled.header`
     gap: 8px;
 `;
 
-const TextList = styled.ul`
-    list-style-type: disc;
-
-    padding-left: 24px;
-`;
-
-const TextItem = styled.li`
-    padding: 4px 0;
-
+const TextListItem = styled(ListItem)`
     & > p {
         display: inline;
     }
