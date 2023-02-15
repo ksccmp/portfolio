@@ -48,6 +48,7 @@ const Stack = () => {
                         <ListItemFormControl label="ALB" />
                         <ListItemFormControl label="S3" />
                         <ListItemFormControl label="CloudWatch" />
+                        <ListItemFormControl label="RDS" />
                     </List>
                 </Dropdown>
 

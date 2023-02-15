@@ -10,6 +10,9 @@ const Document = () => {
                     type="text/css"
                     href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css"
                 />
+
+                {/* favicon */}
+                <link rel="shortcut icon" href="/images/profile.jpg" />
             </Head>
 
             <body>
