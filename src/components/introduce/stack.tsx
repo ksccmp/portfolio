@@ -5,6 +5,7 @@ import { _useModal } from '@src/modules/customHook/useModal';
 import ContentWrapper from '../molecules/contentWrapper';
 import Dropdown from '../molecules/drowndown';
 import TextBoxFormControl from '../molecules/textBoxFormControl';
+import HtmlStackModal from '../organisms/modal/HtmlStackModal';
 import JavaScriptStackModal from '../organisms/modal/JavaScriptStackModal';
 import NextStackModal from '../organisms/modal/NextStackModal';
 import ReactStackModal from '../organisms/modal/ReactStackModal';
@@ -15,6 +16,7 @@ const Stack = () => {
     const NEXT_STACK_MODAL = 'NEXT_STACK_MODAL';
     const TYPESCRIPT_STACK_MODAL = 'TYPESCRIPT_STACK_MODAL';
     const JAVASCRIPT_STACK_MODAL = 'JAVASCRIPT_STACK_MODAL';
+    const HTML_STACK_MODAL = 'HTML_STACK_MODAL';
 
     /**
      * customHook
@@ -30,7 +32,7 @@ const Stack = () => {
                         <TextBoxFormControl label="Next" onClick={() => useModal.open(NEXT_STACK_MODAL)} />
                         <TextBoxFormControl label="TypeScript" onClick={() => useModal.open(TYPESCRIPT_STACK_MODAL)} />
                         <TextBoxFormControl label="JavaScript" onClick={() => useModal.open(JAVASCRIPT_STACK_MODAL)} />
-                        <TextBoxFormControl label="HTML" />
+                        <TextBoxFormControl label="HTML" onClick={() => useModal.open(HTML_STACK_MODAL)} />
                         <TextBoxFormControl label="CSS" />
                     </Container>
                 </Dropdown>
@@ -85,6 +87,7 @@ const Stack = () => {
             {useModal.isOpen(JAVASCRIPT_STACK_MODAL) && (
                 <JavaScriptStackModal onClose={() => useModal.close(JAVASCRIPT_STACK_MODAL)} />
             )}
+            {useModal.isOpen(HTML_STACK_MODAL) && <HtmlStackModal onClose={() => useModal.close(HTML_STACK_MODAL)} />}
         </>
     );
 };
