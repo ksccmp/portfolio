@@ -1,5 +1,7 @@
+import styled from '@emotion/styled';
+
 import List from '@src/components/atoms/list';
-import ListItem from '@src/components/atoms/listItem';
+import _ListItem from '@src/components/atoms/listItem';
 import Text from '@src/components/atoms/text';
 
 interface Props {
@@ -30,3 +32,10 @@ const ListItemFormControl = (props: Props) => {
 };
 
 export default ListItemFormControl;
+
+const ListItem = styled(_ListItem)`
+    & h2,
+    & p {
+        display: inline;
+    }
+`;
