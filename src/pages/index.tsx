@@ -1,5 +1,4 @@
 import styled from '@emotion/styled';
-import Head from 'next/head';
 
 import Career from '@src/components/introduce/career';
 import Contact from '@src/components/introduce/contact';
@@ -11,23 +10,17 @@ import Stack from '@src/components/introduce/stack';
 
 const Index = () => {
     return (
-        <>
-            <Head>
-                <title>김성찬의 포트폴리오</title>
-            </Head>
-
-            <Wrapper>
-                <IntroduceArticle>
-                    <Profile />
-                    <Career />
-                    <Project />
-                    <Stack />
-                    <Education />
-                    <Plan />
-                    <Contact />
-                </IntroduceArticle>
-            </Wrapper>
-        </>
+        <Wrapper>
+            <IntroduceArticle>
+                <Profile />
+                <Career />
+                <Project />
+                <Stack />
+                <Education />
+                <Plan />
+                <Contact />
+            </IntroduceArticle>
+        </Wrapper>
     );
 };
 
