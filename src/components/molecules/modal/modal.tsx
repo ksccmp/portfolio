@@ -1,5 +1,6 @@
 import { ReactNode, useEffect } from 'react';
 
+import { css, keyframes } from '@emotion/react';
 import styled from '@emotion/styled';
 
 import { SCREEN } from '@src/utils/constant';
@@ -22,7 +23,7 @@ const Modal = (props: Props) => {
     }, []);
 
     /**
-     * 이벤트 핸들러
+     * handle
      */
     const handle = {
         clickWindow: () => {
@@ -36,7 +37,9 @@ const Modal = (props: Props) => {
 
     return (
         <Wrapper>
-            <Container onClick={handle.clickContainer}>{props.children}</Container>
+            <Container onClick={handle.clickContainer}>
+                <ContentSection>{props.children}</ContentSection>
+            </Container>
         </Wrapper>
     );
 };
@@ -62,10 +65,46 @@ const Wrapper = styled.div`
     z-index: 1000;
 `;
 
-const Container = styled.div`
-    padding: 20px;
+const containerKeyframes = keyframes`
+    0% {
+        width: 0;
+        max-height: 0;
+        padding: 0;
+    }
 
+    100% {
+        width: ${SCREEN.FOLD}px;
+        max-height: 92vh;
+        padding: 20px;
+    }
+`;
+
+const Container = styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    overflow: hidden;
+
+    width: ${SCREEN.FOLD}px;
+    max-height: 92vh;
+
+    animation-name: ${containerKeyframes};
+    animation-duration: 0.4s;
+    animation-timing-function: ease-in;
+`;
+
+const ContentSection = styled.div`
     overflow: auto;
 
-    max-width: ${SCREEN.MOBILE}px;
+    flex: 1 0 auto;
+
+    width: ${SCREEN.FOLD}px;
+    max-height: 92vh;
+
+    padding: 20px;
+
+    ${(props) => css`
+        background-color: ${props.theme.color.white};
+    `}
 `;

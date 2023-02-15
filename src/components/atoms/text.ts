@@ -6,7 +6,7 @@ import theme from '@src/styles/theme';
 interface Props {
     color?: keyof typeof theme.color;
     size?: keyof typeof theme.font.size;
-    weight?: keyof typeof theme.font.weight;
+    weight?: keyof typeof theme.font.weight | false;
     decoration?: 'underline';
 }
 
@@ -41,7 +41,7 @@ const Text = styled.p<Props>`
         }
     }}
 
-${(props) => {
+    ${(props) => {
         if (props.decoration) {
             return css`
                 text-decoration: ${props.decoration};

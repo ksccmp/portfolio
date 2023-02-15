@@ -6,13 +6,14 @@ import Text from '@src/components/atoms/text';
 
 interface Props {
     label: string;
+    labelBold?: boolean;
     contents?: string[];
 }
 
 const ListItemFormControl = (props: Props) => {
     return (
         <ListItem>
-            <Text color="grayscale80" size="xLarge">
+            <Text color="grayscale80" size="xLarge" weight={props.labelBold && 'bold'}>
                 {props.label}
             </Text>
 

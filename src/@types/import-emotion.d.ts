@@ -30,6 +30,10 @@ declare module '@emotion/react' {
             grayscale30: string;
             grayscale20: string;
             grayscale10: string;
+
+            skyblue20: string;
+
+            white: string;
         };
 
         screen: {

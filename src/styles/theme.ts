@@ -29,6 +29,10 @@ const theme: Theme = {
         grayscale30: '#c2c5cb',
         grayscale20: '#dee1e5',
         grayscale10: '#f7f9fa',
+
+        skyblue20: '#e7f3f8',
+
+        white: '#ffffff',
     },
 
     screen: {

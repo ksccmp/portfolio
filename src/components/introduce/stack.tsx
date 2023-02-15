@@ -1,68 +1,87 @@
 import styled from '@emotion/styled';
 
-import List from '../atoms/list';
+import { _useModal } from '@src/modules/customHook/useModal';
+
 import ContentWrapper from '../molecules/contentWrapper';
 import Dropdown from '../molecules/drowndown';
-import ListItemFormControl from '../molecules/listItemFormControl';
+import TextBoxFormControl from '../molecules/textBoxFormControl';
+import ReactStackModal from '../organisms/modal/ReactStackModal';
 
 const Stack = () => {
+    const REACT_STACK_MODAL = 'REACT_STACK_MODAL';
+
+    /**
+     * customHook
+     */
+    const useModal = _useModal();
+
     return (
-        <ContentWrapper label="🛠️ Stack">
-            <Wrapper>
+        <>
+            <ContentWrapper label="🛠️ Stack">
                 <Dropdown label="FrondEnd">
-                    <List listStyleType="disc">
-                        <ListItemFormControl label="React" />
-                        <ListItemFormControl label="Next" />
-                        <ListItemFormControl label="TypeScript" />
-                        <ListItemFormControl label="JavaScript" />
-                        <ListItemFormControl label="HTML" />
-                        <ListItemFormControl label="CSS" />
-                    </List>
+                    <Container>
+                        <TextBoxFormControl label="React" onClick={() => useModal.open(REACT_STACK_MODAL)} />
+                        <TextBoxFormControl label="Next" />
+                        <TextBoxFormControl label="TypeScript" />
+                        <TextBoxFormControl label="JavaScript" />
+                        <TextBoxFormControl label="HTML" />
+                        <TextBoxFormControl label="CSS" />
+                    </Container>
                 </Dropdown>
 
                 <Dropdown label="BackEnd" open={false}>
-                    <List listStyleType="disc">
-                        <ListItemFormControl label="SpringBoot" />
-                        <ListItemFormControl label="JPA" />
-                        <ListItemFormControl label="QueryDSL" />
-                        <ListItemFormControl label="MyBatis" />
-                    </List>
+                    <Container>
+                        <TextBoxFormControl label="SpringBoot" />
+                        <TextBoxFormControl label="JPA" />
+                        <TextBoxFormControl label="QueryDSL" />
+                        <TextBoxFormControl label="MyBatis" />
+                    </Container>
                 </Dropdown>
 
                 <Dropdown label="Devops">
-                    <List listStyleType="disc">
-                        <ListItemFormControl label="GitLab" />
-                        <ListItemFormControl label="Docker" />
-                        <ListItemFormControl label="GitLab Runner" />
-                        <ListItemFormControl label="Jira" />
-                        <ListItemFormControl label="Confluence" />
-                        <ListItemFormControl label="Jenkins" />
-                    </List>
+                    <Container>
+                        <TextBoxFormControl label="GitLab" />
+                        <TextBoxFormControl label="Docker" />
+                        <TextBoxFormControl label="GitLab Runner" />
+                        <TextBoxFormControl label="Jira" />
+                        <TextBoxFormControl label="Confluence" />
+                        <TextBoxFormControl label="Jenkins" />
+                    </Container>
                 </Dropdown>
 
                 <Dropdown label="AWS">
-                    <List listStyleType="disc">
-                        <ListItemFormControl label="EC2" />
-                        <ListItemFormControl label="Lambda" />
-                        <ListItemFormControl label="ECS" />
-                        <ListItemFormControl label="ALB" />
-                        <ListItemFormControl label="S3" />
-                        <ListItemFormControl label="CloudWatch" />
-                        <ListItemFormControl label="RDS" />
-                    </List>
+                    <Container>
+                        <TextBoxFormControl label="EC2" />
+                        <TextBoxFormControl label="Lambda" />
+                        <TextBoxFormControl label="ECS" />
+                        <TextBoxFormControl label="ALB" />
+                        <TextBoxFormControl label="S3" />
+                        <TextBoxFormControl label="CloudWatch" />
+                        <TextBoxFormControl label="RDS" />
+                    </Container>
                 </Dropdown>
 
                 <Dropdown label="Cooperation">
-                    <List listStyleType="disc">
-                        <ListItemFormControl label="Zeplin" />
-                        <ListItemFormControl label="Slack" />
-                    </List>
+                    <Container>
+                        <TextBoxFormControl label="Zeplin" />
+                        <TextBoxFormControl label="Slack" />
+                    </Container>
                 </Dropdown>
-            </Wrapper>
-        </ContentWrapper>
+            </ContentWrapper>
+
+            {useModal.isOpen(REACT_STACK_MODAL) && (
+                <ReactStackModal onClose={() => useModal.close(REACT_STACK_MODAL)} />
+            )}
+        </>
     );
 };
 
 export default Stack;
 
-const Wrapper = styled.div``;
+const Container = styled.div`
+    padding: 6px;
+
+    & > div {
+        margin: 6px;
+    }
+`;
