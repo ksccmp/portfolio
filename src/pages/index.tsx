@@ -1,6 +1,7 @@
 import styled from '@emotion/styled';
 import Head from 'next/head';
 
+import Career from '@src/components/introduce/career';
 import Profile from '@src/components/introduce/profile';
 
 const Index = () => {
@@ -13,6 +14,7 @@ const Index = () => {
             <Wrapper>
                 <IntroduceArticle>
                     <Profile />
+                    <Career />
                 </IntroduceArticle>
             </Wrapper>
         </>
@@ -29,4 +31,8 @@ const IntroduceArticle = styled.article`
 
     margin: 0 auto;
     padding: 11.2em 0;
+
+    display: flex;
+    flex-direction: column;
+    gap: 64px;
 `;
