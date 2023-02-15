@@ -1,12 +1,7 @@
-import React from 'react';
-
-import Head from 'next/head';
 import styled from '@emotion/styled';
+import Head from 'next/head';
 
-import { getImage } from '@src/utils/getImage';
 import Profile from '@src/components/introduce/profile';
-import Text from '@src/components/atoms/text';
-import Icon from '@src/components/atoms/icon';
 
 const Index = () => {
     return (
@@ -16,10 +11,6 @@ const Index = () => {
             </Head>
 
             <Wrapper>
-                <Header>
-                    <Icon src={getImage('BACKGROUND')} width="100%" height="100%" />
-                </Header>
-
                 <IntroduceArticle>
                     <Profile />
                 </IntroduceArticle>
@@ -32,13 +23,10 @@ export default Index;
 
 const Wrapper = styled.div``;
 
-const Header = styled.header`
-    height: 328px;
-`;
-
 const IntroduceArticle = styled.article`
     width: 100%;
     max-width: 728px;
 
     margin: 0 auto;
+    padding: 11.2em 0;
 `;

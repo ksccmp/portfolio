@@ -1,7 +1,7 @@
-import React, { ReactNode } from 'react';
+import { ReactNode } from 'react';
 
-import { SCREEN } from '@src/utils/constant';
 import _useResize from '@src/modules/customHook/useResize';
+import { SCREEN } from '@src/utils/constant';
 
 interface Props {
     children: ReactNode;

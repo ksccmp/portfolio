@@ -3,7 +3,7 @@ import { Theme } from '@emotion/react';
 const theme: Theme = {
     font: {
         size: {
-            '4xLarge': '36px',
+            '4xLarge': '28px',
             '3xLarge': '24px',
             '2xLarge': '20px',
             xLarge: '18px',
