@@ -4,8 +4,6 @@ const Document = () => {
     return (
         <Html>
             <Head>
-                <title>FE개발자 김성찬입니다.</title>
-
                 {/* 폰트 */}
                 <link
                     rel="stylesheet"

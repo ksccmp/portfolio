@@ -7,6 +7,7 @@ import Plan from '@src/components/introduce/plan';
 import Profile from '@src/components/introduce/profile';
 import Project from '@src/components/introduce/project';
 import Stack from '@src/components/introduce/stack';
+import { SCREEN } from '@src/utils/constant';
 
 const Index = () => {
     return (
@@ -30,7 +31,7 @@ const Wrapper = styled.div``;
 
 const IntroduceArticle = styled.article`
     width: 100%;
-    max-width: 728px;
+    max-width: ${SCREEN.MOBILE}px;
 
     margin: 0 auto;
     padding: 11.2em 0;

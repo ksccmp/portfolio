@@ -1,6 +1,6 @@
 import List from '../atoms/list';
-import ContentWrapper from '../molecules/introduce/contentWrapper';
-import ListItemFormControl from '../molecules/introduce/listItemFormControl';
+import ContentWrapper from '../molecules/contentWrapper';
+import ListItemFormControl from '../molecules/listItemFormControl';
 
 const Education = () => {
     return (

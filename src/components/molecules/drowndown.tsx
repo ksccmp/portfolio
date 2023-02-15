@@ -62,4 +62,4 @@ const Header = styled.header`
     box-shadow: 0 2px 1px -1px rgba(0, 0, 0, 0.3);
 `;
 
-const Body = styled.body``;
+const Body = styled.div``;

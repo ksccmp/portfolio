@@ -5,7 +5,7 @@ import { getImage } from '@src/utils/getImage';
 import Image from '../atoms/image';
 import List from '../atoms/list';
 import Title from '../atoms/title';
-import ListItemFormControl from '../molecules/introduce/listItemFormControl';
+import ListItemFormControl from '../molecules/listItemFormControl';
 
 const Profile = () => {
     return (

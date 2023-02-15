@@ -5,7 +5,7 @@ import List from '../atoms/list';
 import ListItem from '../atoms/listItem';
 import Span from '../atoms/span';
 import Text from '../atoms/text';
-import ContentWrapper from '../molecules/introduce/contentWrapper';
+import ContentWrapper from '../molecules/contentWrapper';
 
 const Contact = () => {
     return (
