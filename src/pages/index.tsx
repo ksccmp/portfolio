@@ -2,6 +2,7 @@ import styled from '@emotion/styled';
 import Head from 'next/head';
 
 import Career from '@src/components/introduce/career';
+import Education from '@src/components/introduce/education';
 import Profile from '@src/components/introduce/profile';
 import Project from '@src/components/introduce/project';
 import Stack from '@src/components/introduce/stack';
@@ -19,6 +20,7 @@ const Index = () => {
                     <Career />
                     <Project />
                     <Stack />
+                    <Education />
                 </IntroduceArticle>
             </Wrapper>
         </>

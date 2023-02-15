@@ -1,12 +1,12 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 
-import { AppProps } from 'next/app';
 import { Theme, ThemeProvider } from '@emotion/react';
+import { AppProps } from 'next/app';
 
-import { SCREEN } from '@src/utils/constant';
-import _theme from '@src/styles/theme';
-import GlobalStyle from '@src/styles/globalStyles';
 import _useResize from '@src/modules/customHook/useResize';
+import GlobalStyle from '@src/styles/globalStyles';
+import _theme from '@src/styles/theme';
+import { SCREEN } from '@src/utils/constant';
 
 const App = ({ Component, pageProps }: AppProps) => {
     /**
