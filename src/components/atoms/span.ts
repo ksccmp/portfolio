@@ -10,8 +10,7 @@ interface Props {
     decoration?: 'underline';
 }
 
-const Text = styled.p<Props>`
-    display: inline-block;
+const Span = styled.span<Props>`
     word-break: keep-all;
 
     letter-spacing: -0.64px;
@@ -41,7 +40,7 @@ const Text = styled.p<Props>`
         }
     }}
 
-${(props) => {
+    ${(props) => {
         if (props.decoration) {
             return css`
                 text-decoration: ${props.decoration};
@@ -50,4 +49,4 @@ ${(props) => {
     }}
 `;
 
-export default Text;
+export default Span;
