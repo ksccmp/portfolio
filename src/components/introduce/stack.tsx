@@ -25,8 +25,10 @@ import QueryDslStackModal from '../organisms/modal/QueryDslStackModal';
 import RdsStackModal from '../organisms/modal/RdsStackModal';
 import ReactStackModal from '../organisms/modal/ReactStackModal';
 import S3StackModal from '../organisms/modal/S3StackModal';
+import SlackStackModal from '../organisms/modal/SlackStackModal';
 import SpringBootStackModal from '../organisms/modal/SpringBootStackModal';
 import TypeScriptStackModal from '../organisms/modal/TypeScriptStackModal';
+import ZeplinStackModal from '../organisms/modal/ZeplinStackModal';
 
 const Stack = () => {
     // FrontEnd
@@ -58,6 +60,10 @@ const Stack = () => {
     const S3_STACK_MODAL = 'S3_STACK_MODAL';
     const CLOUDWATCH_STACK_MODAL = 'CLOUDWATCH_STACK_MODAL';
     const RDS_STACK_MODAL = 'RDS_STACK_MODAL';
+
+    // Cooperation
+    const ZEPLIN_STACK_MODAL = 'ZEPLIN_STACK_MODAL';
+    const SLACK_STACK_MODAL = 'SLACK_STACK_MODAL';
 
     /**
      * customHook
@@ -114,8 +120,8 @@ const Stack = () => {
 
                 <Dropdown label="Cooperation">
                     <Container>
-                        <TextBoxFormControl label="Zeplin" />
-                        <TextBoxFormControl label="Slack" />
+                        <TextBoxFormControl label="Zeplin" onClick={() => useModal.open(ZEPLIN_STACK_MODAL)} />
+                        <TextBoxFormControl label="Slack" onClick={() => useModal.open(SLACK_STACK_MODAL)} />
                     </Container>
                 </Dropdown>
             </ContentWrapper>
@@ -175,6 +181,14 @@ const Stack = () => {
                 <CloudWatchStackModal onClose={() => useModal.close(CLOUDWATCH_STACK_MODAL)} />
             )}
             {useModal.isOpen(RDS_STACK_MODAL) && <RdsStackModal onClose={() => useModal.close(RDS_STACK_MODAL)} />}
+
+            {/* Cooperation */}
+            {useModal.isOpen(ZEPLIN_STACK_MODAL) && (
+                <ZeplinStackModal onClose={() => useModal.close(ZEPLIN_STACK_MODAL)} />
+            )}
+            {useModal.isOpen(SLACK_STACK_MODAL) && (
+                <SlackStackModal onClose={() => useModal.close(SLACK_STACK_MODAL)} />
+            )}
         </>
     );
 };
