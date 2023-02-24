@@ -1,3 +1,4 @@
+import { css } from '@emotion/react';
 import styled from '@emotion/styled';
 
 import Career from '@src/components/introduce/career';
@@ -34,9 +35,20 @@ const IntroduceArticle = styled.article`
     max-width: ${SCREEN.MOBILE}px;
 
     margin: 0 auto;
-    padding: 11.2em 0;
 
     display: flex;
     flex-direction: column;
     gap: 64px;
+
+    ${(props) => {
+        if (props.theme.screen.desktop) {
+            return css`
+                padding: 11.2em 28px;
+            `;
+        } else {
+            return css`
+                padding: 1.2em 28px;
+            `;
+        }
+    }}
 `;

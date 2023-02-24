@@ -9,7 +9,7 @@ const Project = () => {
     return (
         <ContentWrapper label="💻 Project">
             <Wrapper>
-                <Dropdown label="안전품질정보관리 서비스 (2022.04 ~ 2023.03)">
+                <Dropdown label="안전품질정보관리 서비스 (22.04 ~ 23.03)">
                     <List listStyleType="disc">
                         <ListItemFormControl
                             label="FrondEnd"
@@ -48,7 +48,7 @@ const Project = () => {
                     </List>
                 </Dropdown>
 
-                <Dropdown label="품질개선관리 서비스 (Toy) (2021.04 ~ 2021.08)">
+                <Dropdown label="품질개선관리 서비스 (Toy, 21.04 ~ 21.08)">
                     <List listStyleType="disc">
                         <ListItemFormControl
                             label="FrondEnd"

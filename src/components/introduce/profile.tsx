@@ -1,5 +1,7 @@
+import { css } from '@emotion/react';
 import styled from '@emotion/styled';
 
+import _useResize from '@src/modules/customHook/useResize';
 import { getImage } from '@src/utils/getImage';
 
 import Image from '../atoms/image';
@@ -8,10 +10,15 @@ import Title from '../atoms/title';
 import ListItemFormControl from '../molecules/listItemFormControl';
 
 const Profile = () => {
+    /**
+     * customHook
+     */
+    const useResize = _useResize();
+
     return (
-        <Wrapper>
+        <Wrapper innerWidth={useResize.innerWidth}>
             <ImageSection>
-                <Image src={getImage('PROFILE')} width={196} height={196} radius={8} />
+                <Image src={getImage('PROFILE')} radius={8} />
             </ImageSection>
 
             <IntroduceSection>
@@ -33,9 +40,34 @@ const Profile = () => {
 
 export default Profile;
 
-const Wrapper = styled.div`
+const Wrapper = styled.div<{ innerWidth: number }>`
     display: flex;
-    gap: 64px;
+
+    ${(props) => {
+        if (props.innerWidth < 600) {
+            return css`
+                flex-direction: column;
+                align-items: center;
+                gap: 32px;
+
+                & > section:first-child > img {
+                    width: 100%;
+
+                    min-width: 196px;
+                    max-width: 336px;
+                }
+            `;
+        } else {
+            return css`
+                gap: 64px;
+
+                & > section:first-child > img {
+                    width: 196px;
+                    height: 196px;
+                }
+            `;
+        }
+    }}
 `;
 
 const ImageSection = styled.section``;

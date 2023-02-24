@@ -23,7 +23,7 @@ export default TextBoxFormControl;
 const Wrapper = styled.div`
     display: inline-block;
 
-    min-width: 146px;
+    min-width: 140px;
 
     padding: 4px 12px;
 

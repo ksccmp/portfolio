@@ -29,15 +29,11 @@ const Modal = (props: Props) => {
         clickWindow: () => {
             props.onClose();
         },
-
-        clickContainer: (e: React.MouseEvent<HTMLDivElement>) => {
-            e.stopPropagation();
-        },
     };
 
     return (
         <Wrapper>
-            <Container onClick={handle.clickContainer}>
+            <Container>
                 <ContentSection>{props.children}</ContentSection>
             </Container>
         </Wrapper>
@@ -53,6 +49,7 @@ const Wrapper = styled.div`
     background-color: rgba(223, 225, 228, 0.5);
 
     margin: 0 auto;
+    padding: 0 12px;
 
     position: fixed;
     top: 0;
@@ -103,6 +100,8 @@ const ContentSection = styled.div`
     max-height: 92vh;
 
     padding: 20px;
+
+    border-radius: 20px;
 
     ${(props) => css`
         background-color: ${props.theme.color.white};
