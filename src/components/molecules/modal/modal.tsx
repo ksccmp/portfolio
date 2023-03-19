@@ -64,15 +64,13 @@ const Wrapper = styled.div`
 
 const containerKeyframes = keyframes`
     0% {
-        width: 0;
-        max-height: 0;
-        padding: 0;
+        transform: translateY(42px);
+        opacity: 0;
     }
 
     100% {
-        width: ${SCREEN.FOLD}px;
-        max-height: 92vh;
-        padding: 20px;
+        transform: translateY(0);
+        opacity: 1;
     }
 `;
 

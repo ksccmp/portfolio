@@ -7,6 +7,8 @@ import { getImage } from '@src/utils/getImage';
 import Image from '../atoms/image';
 import Title from '../atoms/title';
 
+import TimingAnimation from './timingAnimation';
+
 interface Props {
     label: string;
     open?: boolean;
@@ -30,13 +32,15 @@ const Dropdown = (props: Props) => {
 
     return (
         <Wrapper>
-            <Header onClick={handle.clickHeader}>
-                <Title color="grayscale90" size="xLarge" weight="bold">
-                    {props.label}
-                </Title>
+            <TimingAnimation>
+                <Header onClick={handle.clickHeader}>
+                    <Title color="grayscale90" size="xLarge" weight="bold">
+                        {props.label}
+                    </Title>
 
-                <Image src={open ? getImage('ARROW-UP') : getImage('ARROW-DOWN')} />
-            </Header>
+                    <Image src={open ? getImage('ARROW-UP') : getImage('ARROW-DOWN')} />
+                </Header>
+            </TimingAnimation>
 
             {open && <Body>{props.children}</Body>}
         </Wrapper>

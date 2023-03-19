@@ -3,6 +3,8 @@ import styled from '@emotion/styled';
 
 import Text from '@src/components/atoms/text';
 
+import TimingAnimation from './timingAnimation';
+
 interface Props {
     label: string;
     onClick?: () => void;
@@ -11,9 +13,13 @@ interface Props {
 const TextBoxFormControl = (props: Props) => {
     return (
         <Wrapper onClick={props.onClick}>
-            <Text color="grayscale100" size="large">
-                {props.label}
-            </Text>
+            <TimingAnimation>
+                <Container>
+                    <Text color="grayscale100" size="large">
+                        {props.label}
+                    </Text>
+                </Container>
+            </TimingAnimation>
         </Wrapper>
     );
 };
@@ -24,14 +30,16 @@ const Wrapper = styled.div`
     display: inline-block;
 
     min-width: 140px;
+`;
 
-    padding: 4px 12px;
-
+const Container = styled.div`
     border-radius: 6px;
 
     cursor: pointer;
 
     transition: 0.3s ease-out;
+
+    padding: 4px 12px;
 
     ${(props) => css`
         border: 1px solid ${props.theme.color.grayscale40};
