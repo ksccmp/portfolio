@@ -81,12 +81,23 @@ const Container = styled.div`
 
     overflow: hidden;
 
-    width: ${SCREEN.FOLD}px;
     max-height: 92vh;
 
     animation-name: ${containerKeyframes};
     animation-duration: 0.4s;
     animation-timing-function: ease-in;
+
+    ${(props) => {
+        if (props.theme.screen.fold) {
+            return css`
+                width: 100%;
+            `;
+        } else {
+            return css`
+                width: ${SCREEN.FOLD}px;
+            `;
+        }
+    }}
 `;
 
 const ContentSection = styled.div`
@@ -94,7 +105,6 @@ const ContentSection = styled.div`
 
     flex: 1 0 auto;
 
-    width: ${SCREEN.FOLD}px;
     max-height: 92vh;
 
     padding: 20px;
@@ -104,4 +114,16 @@ const ContentSection = styled.div`
     ${(props) => css`
         background-color: ${props.theme.color.white};
     `}
+
+    ${(props) => {
+        if (props.theme.screen.fold) {
+            return css`
+                width: 100%;
+            `;
+        } else {
+            return css`
+                width: ${SCREEN.FOLD}px;
+            `;
+        }
+    }}
 `;
