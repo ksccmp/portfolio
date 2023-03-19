@@ -16,15 +16,16 @@ const Project = () => {
                             <ListItemFormControl
                                 label="FrondEnd"
                                 contents={[
-                                    'React, TypeScript를 사용했어요',
-                                    '상태관리로 Recoil을 활용했어요',
-                                    'StyledComponents를 사용하여 CSS를 적용했어요',
-                                    '컴포넌트 개발에 Atomic Design을 적용했어요',
-                                    '개발된 컴포넌트들을 문서화하기 위해 Storybook을 사용했어요',
-                                    '유효성 검증을 위해 React Hook Form과 Yup을 적용했어요',
-                                    'UseMemo, UseCallback을 이용하여 렌더링 최적화를 적용했어요',
-                                    'Lint, Prettier로 코드 포매팅, import/order 등을 적용했어요',
-                                    'Webpack을 이용하여 번들링을 하고있어요',
+                                    '주요기술 : React, TypeScript',
+                                    '상태관리 : Recoil',
+                                    'CSS : StyledComponents',
+                                    '컴포넌트 디자인 : Atomic Design',
+                                    '컴포넌트 문서화 : Storybook',
+                                    '유효성 검증 : React Hook Form, Yup',
+                                    '번들러 : Webpack',
+                                    '컨벤션 : ESLint, Prettier',
+                                    '성능측정 : Lighthouse',
+                                    '최적화 : 불필요한 렌더링 개선 (Lighthouse TTI 8초 → 4초), 메모이제이션 (useMemo), LazyLoading',
                                 ]}
                             />
                         </TimingAnimation>
@@ -33,10 +34,10 @@ const Project = () => {
                             <ListItemFormControl
                                 label="BackEnd"
                                 contents={[
-                                    'SpringBoot, JPA를 사용했어요',
-                                    'QueryDSL을 활용하여 JPA 사용성을 높였어요',
-                                    'API를 문서화하기 위해 Swagger를 사용했어요',
-                                    'JWT를 이용하여 사용자 인증을 처리하고 있어요',
+                                    '주요기술 : SpringBoot, JPA, QueryDSL',
+                                    'API 문서화 : Swagger',
+                                    '인증방식 : JWT',
+                                    '컨벤션 : IntelliJ',
                                 ]}
                             />
                         </TimingAnimation>
@@ -44,15 +45,12 @@ const Project = () => {
                         <TimingAnimation>
                             <ListItemFormControl
                                 label="Devops"
-                                contents={['GitLab과 Jenkins를 사용하여 CI/CD 파이프라인을 구축했어요']}
+                                contents={['코드관리 : GitLab', '배포 자동화 : Jenkins']}
                             />
                         </TimingAnimation>
 
                         <TimingAnimation>
-                            <ListItemFormControl
-                                label="Cooperation"
-                                contents={['Zeplin을 이용하여 디자이너와 소통했어요']}
-                            />
+                            <ListItemFormControl label="Cooperation" contents={['디자인 도구 : Zeplin']} />
                         </TimingAnimation>
                     </List>
                 </Dropdown>
@@ -63,12 +61,12 @@ const Project = () => {
                             <ListItemFormControl
                                 label="FrondEnd"
                                 contents={[
-                                    'React, TypeScript를 사용했어요',
-                                    '상태관리로 Redux를 활용했어요',
-                                    'StyledComponents를 사용하여 CSS를 적용했어요',
-                                    'LazyLoading을 이용하여 렌더링 최적화를 적용했어요',
-                                    'Lint, Prettier로 코드 포매팅을 적용했어요',
-                                    'Webpack을 이용하여 번들링을 하고있어요',
+                                    '주요기술 : React, TypeScript',
+                                    '상태관리 : Redux',
+                                    'CSS : StyledComponents',
+                                    '번들러 : Webpack',
+                                    '컨벤션 : ESLint, Prettier',
+                                    '최적화 : LazyLoading',
                                 ]}
                             />
                         </TimingAnimation>
@@ -76,15 +74,12 @@ const Project = () => {
                         <TimingAnimation>
                             <ListItemFormControl
                                 label="BackEnd"
-                                contents={[
-                                    'SpringBoot, MyBatis를 사용했어요',
-                                    'JWT를 이용하여 사용자 인증을 처리하고 있어요',
-                                ]}
+                                contents={['주요기술 : SpringBoot, MyBatis', '인증방식 : JWT']}
                             />
                         </TimingAnimation>
 
                         <TimingAnimation>
-                            <ListItemFormControl label="Devops" contents={['GitLab으로 코드관리를 하고 있어요']} />
+                            <ListItemFormControl label="Devops" contents={['코드관리 : GitLab']} />
                         </TimingAnimation>
                     </List>
                 </Dropdown>
