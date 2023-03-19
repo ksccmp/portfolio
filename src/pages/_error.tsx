@@ -1,27 +1,22 @@
-import React from 'react';
+import styled from '@emotion/styled';
 
-import { GetServerSideProps } from 'next';
+import Text from '@src/components/atoms/text';
 
-interface Error {
-    statusCode: number;
-}
-
-const Error: React.FC<Error> = ({ statusCode }) => {
+const Error = () => {
     return (
-        <div>
-            에러 발생 시 나오는 페이지 <br /> {statusCode}
-        </div>
+        <Wrapper>
+            <Text size="2xLarge" weight="bold">
+                제공하지 않는 페이지입니다.
+            </Text>
+        </Wrapper>
     );
 };
 
-export const getServerSideProps: GetServerSideProps = async ({ res, req }) => {
-    const statusCode = res.statusCode;
-
-    return {
-        props: {
-            statusCode,
-        },
-    };
-};
-
 export default Error;
+
+const Wrapper = styled.div`
+    display: flex;
+    justify-content: center;
+
+    padding: 12px 20px;
+`;
