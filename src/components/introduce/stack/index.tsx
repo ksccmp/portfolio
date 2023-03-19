@@ -15,7 +15,6 @@ import RdsStackModal from './modal/aws/RdsStackModal';
 import S3StackModal from './modal/aws/S3StackModal';
 import JpaStackModal from './modal/backend/JpaStackModal';
 import MybatisStackModal from './modal/backend/MybatisStackModal';
-import QueryDslStackModal from './modal/backend/QueryDslStackModal';
 import SpringBootStackModal from './modal/backend/SpringBootStackModal';
 import SlackStackModal from './modal/cooperation/SlackStackModal';
 import ZeplinStackModal from './modal/cooperation/ZeplinStackModal';
@@ -43,7 +42,6 @@ const Stack = () => {
     // BackEnd
     const SPRINGBOOT_STACK_MODAL = 'SPRINGBOOT_STACK_MODAL';
     const JPA_STACK_MODAL = 'JPA_STACK_MODAL';
-    const QUERYDSL_STACK_MODAL = 'QUERYDSL_STACK_MODAL';
     const MYBATIS_STACK_MODAL = 'MYBATIS_STACK_MODAL';
 
     // Devops
@@ -89,7 +87,6 @@ const Stack = () => {
                     <Container>
                         <TextBoxFormControl label="SpringBoot" onClick={() => useModal.open(SPRINGBOOT_STACK_MODAL)} />
                         <TextBoxFormControl label="JPA" onClick={() => useModal.open(JPA_STACK_MODAL)} />
-                        <TextBoxFormControl label="QueryDSL" onClick={() => useModal.open(QUERYDSL_STACK_MODAL)} />
                         <TextBoxFormControl label="Mybatis" onClick={() => useModal.open(MYBATIS_STACK_MODAL)} />
                     </Container>
                 </Dropdown>
@@ -146,9 +143,6 @@ const Stack = () => {
                 <SpringBootStackModal onClose={() => useModal.close(SPRINGBOOT_STACK_MODAL)} />
             )}
             {useModal.isOpen(JPA_STACK_MODAL) && <JpaStackModal onClose={() => useModal.close(JPA_STACK_MODAL)} />}
-            {useModal.isOpen(QUERYDSL_STACK_MODAL) && (
-                <QueryDslStackModal onClose={() => useModal.close(QUERYDSL_STACK_MODAL)} />
-            )}
             {useModal.isOpen(MYBATIS_STACK_MODAL) && (
                 <MybatisStackModal onClose={() => useModal.close(MYBATIS_STACK_MODAL)} />
             )}

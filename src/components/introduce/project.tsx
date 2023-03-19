@@ -35,9 +35,13 @@ const Project = () => {
                                 label="BackEnd"
                                 contents={[
                                     '주요기술 : SpringBoot, JPA, QueryDSL',
-                                    'API 문서화 : Swagger',
-                                    '인증방식 : JWT',
+                                    '비즈니스 구성 : Controller, Service, Repository',
                                     '재사용 : Interceptor, Filter, AOP',
+                                    'API 문서화 : Swagger',
+                                    '객체 변환 : MapStruct',
+                                    '인증방식 : JWT',
+                                    '로그, 캡슐화 : Lombok',
+                                    '암호화 : AES, SHA',
                                     '컨벤션 : IntelliJ',
                                 ]}
                             />
