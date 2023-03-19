@@ -19,6 +19,10 @@ const App = ({ Component, pageProps }: AppProps) => {
      * useState
      */
     const [theme, setTheme] = useState<Theme>(_theme);
+    const [title] = useState<string>('FE개발자 김성찬입니다.');
+    const [description] = useState<string>('안녕하세요! FE개발자 김성찬의 포트폴리오입니다!');
+    const [url] = useState<string>('https://ksc-portfolio.netlify.app');
+    const [image] = useState<string>('https://ksc-portfolio.netlify.app/images/profile.jpg');
 
     /**
      * useEffect
@@ -59,7 +63,26 @@ const App = ({ Component, pageProps }: AppProps) => {
     return (
         <>
             <Head>
-                <title>FE개발자 김성찬입니다.</title>
+                {/* seo meta, base */}
+                <title>{title}</title>
+                <meta name="title" content={title} />
+                <meta name="description" content={description} />
+                <meta name="keywords" content="포트폴리오, portfolio, fe developer" />
+                <meta name="robots" content="index, follow" />
+
+                {/* seo meta, opengraph */}
+                <meta property="og:site_name" content="포트폴리오" />
+                <meta property="og:title" content={title} />
+                <meta property="og:description" content={description} />
+                <meta property="og:type" content="website" />
+                <meta property="og:url" content={url} />
+                <meta property="og:image" content={image} />
+
+                {/* seo meta, twitter */}
+                <meta name="twitter:card" content="summary" />
+                <meta name="twitter:title" content={title} />
+                <meta name="twitter:description" content={description} />
+                <meta name="twitter:image" content={image} />
             </Head>
 
             <ThemeProvider theme={theme}>
