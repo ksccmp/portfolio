@@ -6,11 +6,9 @@ import ContentWrapper from '../../molecules/contentWrapper';
 import Dropdown from '../../molecules/drowndown';
 import TextBoxFormControl from '../../molecules/textBoxFormControl';
 
-import CloudWatchStackModal from './modal/aws/CloudWatchStackModal';
 import Ec2StackModal from './modal/aws/Ec2StackModal';
 import EcsStackModal from './modal/aws/EcsStackModal';
 import LambdaStackModal from './modal/aws/LambdaStackModal';
-import LoadBalancerStackModal from './modal/aws/LoadBalancerStackModal';
 import RdsStackModal from './modal/aws/RdsStackModal';
 import S3StackModal from './modal/aws/S3StackModal';
 import JpaStackModal from './modal/backend/JpaStackModal';
@@ -55,9 +53,7 @@ const Stack = () => {
     const EC2_STACK_MODAL = 'EC2_STACK_MODAL';
     const LAMBDA_STACK_MODAL = 'LAMBDA_STACK_MODAL';
     const ECS_STACK_MODAL = 'ECS_STACK_MODAL';
-    const LOADBALANCER_STACK_MODAL = 'LOADBALANCER_STACK_MODAL';
     const S3_STACK_MODAL = 'S3_STACK_MODAL';
-    const CLOUDWATCH_STACK_MODAL = 'CLOUDWATCH_STACK_MODAL';
     const RDS_STACK_MODAL = 'RDS_STACK_MODAL';
 
     // Cooperation
@@ -106,12 +102,7 @@ const Stack = () => {
                         <TextBoxFormControl label="EC2" onClick={() => useModal.open(EC2_STACK_MODAL)} />
                         <TextBoxFormControl label="Lambda" onClick={() => useModal.open(LAMBDA_STACK_MODAL)} />
                         <TextBoxFormControl label="ECS" onClick={() => useModal.open(ECS_STACK_MODAL)} />
-                        <TextBoxFormControl
-                            label="LoadBalancer"
-                            onClick={() => useModal.open(LOADBALANCER_STACK_MODAL)}
-                        />
                         <TextBoxFormControl label="S3" onClick={() => useModal.open(S3_STACK_MODAL)} />
-                        <TextBoxFormControl label="CloudWatch" onClick={() => useModal.open(CLOUDWATCH_STACK_MODAL)} />
                         <TextBoxFormControl label="RDS" onClick={() => useModal.open(RDS_STACK_MODAL)} />
                     </Container>
                 </Dropdown>
@@ -168,13 +159,7 @@ const Stack = () => {
                 <LambdaStackModal onClose={() => useModal.close(LAMBDA_STACK_MODAL)} />
             )}
             {useModal.isOpen(ECS_STACK_MODAL) && <EcsStackModal onClose={() => useModal.close(ECS_STACK_MODAL)} />}
-            {useModal.isOpen(LOADBALANCER_STACK_MODAL) && (
-                <LoadBalancerStackModal onClose={() => useModal.close(LOADBALANCER_STACK_MODAL)} />
-            )}
             {useModal.isOpen(S3_STACK_MODAL) && <S3StackModal onClose={() => useModal.close(S3_STACK_MODAL)} />}
-            {useModal.isOpen(CLOUDWATCH_STACK_MODAL) && (
-                <CloudWatchStackModal onClose={() => useModal.close(CLOUDWATCH_STACK_MODAL)} />
-            )}
             {useModal.isOpen(RDS_STACK_MODAL) && <RdsStackModal onClose={() => useModal.close(RDS_STACK_MODAL)} />}
 
             {/* Cooperation */}

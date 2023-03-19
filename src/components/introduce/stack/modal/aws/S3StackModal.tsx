@@ -13,10 +13,7 @@ const S3StackModal = (props: Props) => {
                 <ListItemFormControl
                     label="S3"
                     labelBold
-                    contents={[
-                        '서비스에서 사용할 이미지 파일들을 관리하기 위해 S3를 사용해봤어요',
-                        'Lambda에 배포될 빌드 파일들을 관리하는 용도로도 사용해봤어요',
-                    ]}
+                    contents={['서비스에 사용되는 이미지 파일 관리', 'Lambda 배포 빌드 파일 관리']}
                 />
             </List>
         </Modal>

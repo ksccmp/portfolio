@@ -13,10 +13,7 @@ const Ec2StackModal = (props: Props) => {
                 <ListItemFormControl
                     label="EC2"
                     labelBold
-                    contents={[
-                        'EC2를 이용하여 배포를 위한 Linux 서버를 생성할 수 있어요',
-                        'EIP 및 VPC를 활용한 서버 설정들을 할 수 있어요',
-                    ]}
+                    contents={['서버 OS : Ubuntu, AWS Linux', 'Public IP : EIP', '보안그룹 : VPC']}
                 />
             </List>
         </Modal>

@@ -10,7 +10,7 @@ const RdsStackModal = (props: Props) => {
     return (
         <Modal onClose={props.onClose}>
             <List listStyleType="disc">
-                <ListItemFormControl label="RDS" labelBold contents={['RDS를 이용하여 MariaDB 환경을 구축해봤어요']} />
+                <ListItemFormControl label="RDS" labelBold contents={['환경 : MariaDB']} />
             </List>
         </Modal>
     );

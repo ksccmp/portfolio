@@ -14,10 +14,11 @@ const EcsStackModal = (props: Props) => {
                     label="ECS"
                     labelBold
                     contents={[
-                        'EC2환경을 활용한 ECS Cluster를 설정해봤어요',
-                        'ECR을 이용하여 배포에 사용될 Docker Image를 관리할 수 있어요',
-                        'Task에서는 ECR에 올린 Docker Image를 활용하여 생성할 Container를 정의해봤어요',
-                        'ECS Cluster를 생성한 뒤 Service를 이용하여 Container 배포 방식을 설정해봤어요',
+                        'Cluster 환경 : EC2',
+                        'Docker 이미지 관리 : ECR',
+                        'Container 정의 : Task',
+                        'Contianer 배포 설정 : Service',
+                        '로드밸런서 : ALB',
                     ]}
                 />
             </List>
