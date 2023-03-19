@@ -37,6 +37,7 @@ const Project = () => {
                                     '주요기술 : SpringBoot, JPA, QueryDSL',
                                     'API 문서화 : Swagger',
                                     '인증방식 : JWT',
+                                    '재사용 : Interceptor, Filter, AOP',
                                     '컨벤션 : IntelliJ',
                                 ]}
                             />
