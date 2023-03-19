@@ -13,7 +13,7 @@ const JenkinsStackModal = (props: Props) => {
                 <ListItemFormControl
                     label="Jenkins"
                     labelBold
-                    contents={['Git과 연동하여 CI/CD 파이프라인을 구축해봤어요']}
+                    contents={['CI/CD 파이프라인 활용', 'Build 후처리 : Publish Over SSH']}
                 />
             </List>
         </Modal>

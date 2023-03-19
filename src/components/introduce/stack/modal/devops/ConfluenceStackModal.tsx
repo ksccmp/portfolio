@@ -10,11 +10,7 @@ const ConfluenceStackModal = (props: Props) => {
     return (
         <Modal onClose={props.onClose}>
             <List listStyleType="disc">
-                <ListItemFormControl
-                    label="Confluence"
-                    labelBold
-                    contents={['업무처리하면서 팀원들과 공유가 필요한 내용들을 Confluence에 정리하고 있어요']}
-                />
+                <ListItemFormControl label="Confluence" labelBold contents={['페이지를 활용하여 공유 문서 관리']} />
             </List>
         </Modal>
     );

@@ -13,10 +13,7 @@ const JiraStackModal = (props: Props) => {
                 <ListItemFormControl
                     label="Jira"
                     labelBold
-                    contents={[
-                        '팀원들과 Jira를 이용하여 Issue를 관리하여 협업을 해봤어요',
-                        'Git과 Jira를 연동해서도 사용해봤어요',
-                    ]}
+                    contents={['Board : Scrum, Kanban', '이슈관리 : Epic, Story, Task, SubTask', 'Git Commit 연동']}
                 />
             </List>
         </Modal>
