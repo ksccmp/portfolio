@@ -26,7 +26,7 @@ const Contact = () => {
                             <Link href="https://github.com/ksccmp?tab=repositories">
                                 <a>
                                     <Text color="grayscale60" size="large">
-                                        🐙 <Span decoration="underline">GitHub</Span>
+                                        💼 <Span decoration="underline">GitHub</Span>
                                     </Text>
                                 </a>
                             </Link>
