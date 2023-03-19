@@ -11,21 +11,8 @@ const Plan = () => {
                 <List listStyleType="disc">
                     <TimingAnimation>
                         <ListItemFormControl
-                            label="단위 테스트"
-                            contents={[
-                                'Jest와 RTL을 이용한 단위 테스트에 대해 공부할 계획에 있어요',
-                                'Cypress를 이용한 E2E 테스트도 알아보려고 해요',
-                            ]}
-                        />
-                    </TimingAnimation>
-
-                    <TimingAnimation>
-                        <ListItemFormControl
-                            label="SSR"
-                            contents={[
-                                'Next의 SSR에 대해 공부할 계획에 있어요',
-                                'SSR, SSG, Dynamic Routes, ISR 등에 대해 알아보려고 해요',
-                            ]}
+                            label="테스트"
+                            contents={['단위, 통합 테스트 : Jest, RTL', 'E2E 테스트 : Cypress']}
                         />
                     </TimingAnimation>
                 </List>
