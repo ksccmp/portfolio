@@ -25,7 +25,7 @@ const Project = () => {
                                     '번들러 : Webpack',
                                     '컨벤션 : ESLint, Prettier',
                                     '성능측정 : Lighthouse',
-                                    '최적화 : 불필요한 렌더링 개선 (Lighthouse TTI 8초 → 4초), 메모이제이션 (useMemo), LazyLoading',
+                                    '최적화 : 불필요한 렌더링 개선 (Lighthouse TTI 8초 → 4초), 메모이제이션 (useMemo), CodeSpliting, LazyLoading',
                                 ]}
                             />
                         </TimingAnimation>
