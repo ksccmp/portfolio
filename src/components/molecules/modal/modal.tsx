@@ -85,7 +85,6 @@ const Container = styled.div`
 
     animation-name: ${containerKeyframes};
     animation-duration: 0.4s;
-    animation-timing-function: ease-in;
 
     ${(props) => {
         if (props.theme.screen.fold) {
