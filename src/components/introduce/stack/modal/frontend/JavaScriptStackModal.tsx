@@ -14,9 +14,12 @@ const JavaScriptStackModal = (props: Props) => {
                     label="JavaScript"
                     labelBold
                     contents={[
-                        'Array 문법을 적극적으로 활용하고 있어요',
-                        '비동기처리 방식으로 async/await을 선호해요',
-                        '호이스팅, 이벤트루프 등에 대한 개념들을 알고 있어요',
+                        '비동기 : Async/Await, Promise',
+                        '함수 작성 : 함수 표현식',
+                        'Array 문법 : Map, ForEach, Filter, Reduce 등',
+                        '호이스팅',
+                        '클로저',
+                        '이벤트루프',
                     ]}
                 />
             </List>

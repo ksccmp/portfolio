@@ -10,14 +10,7 @@ const HtmlStackModal = (props: Props) => {
     return (
         <Modal onClose={props.onClose}>
             <List listStyleType="disc">
-                <ListItemFormControl
-                    label="HTML"
-                    labelBold
-                    contents={[
-                        '기본적인 HTML 마크업 문법을 활용할 수 있어요',
-                        '개발요건에 필요한 마크업 문법을 선택 및 활용하여 UI를 구성할 수 있어요',
-                    ]}
-                />
+                <ListItemFormControl label="HTML" labelBold contents={['목적에 맞는 마크업 문법 처리']} />
             </List>
         </Modal>
     );

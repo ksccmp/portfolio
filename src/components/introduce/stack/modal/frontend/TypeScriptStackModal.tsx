@@ -14,9 +14,11 @@ const TypeScriptStackModal = (props: Props) => {
                     label="TypeScript"
                     labelBold
                     contents={[
-                        '기본적인 데이터 타입을 알고 있어요',
-                        'Union, Intersection Type 등을 활용할 수 있어요',
-                        'Type Assersion, Type Guard 등을 사용할 주 알아요',
+                        '타입 정의 : interface, type',
+                        'Union Type',
+                        'Intersection Type',
+                        'Type Assersion',
+                        'Type Guard',
                     ]}
                 />
             </List>
