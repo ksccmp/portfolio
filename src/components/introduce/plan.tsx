@@ -14,6 +14,8 @@ const Plan = () => {
                             label="테스트"
                             contents={['단위, 통합 테스트 : Jest, RTL', 'E2E 테스트 : Cypress']}
                         />
+
+                        <ListItemFormControl label="모니터링" contents={['Sentry']} />
                     </TimingAnimation>
                 </List>
             </Dropdown>
