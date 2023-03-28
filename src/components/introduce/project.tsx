@@ -79,7 +79,14 @@ const Project = () => {
                         <TimingAnimation>
                             <ListItemFormControl
                                 label="BackEnd"
-                                contents={['주요기술 : SpringBoot, MyBatis', '인증방식 : JWT']}
+                                contents={[
+                                    '주요기술 : SpringBoot, MyBatis',
+                                    '비즈니스 구성 : Controller, Service, Repository',
+                                    '재사용 : Interceptor, Filter',
+                                    '인증방식 : JWT',
+                                    '로그, 캡슐화 : Lombok',
+                                    '암호화 : AES, SHA',
+                                ]}
                             />
                         </TimingAnimation>
 
