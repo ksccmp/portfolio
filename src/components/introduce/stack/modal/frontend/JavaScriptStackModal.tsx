@@ -14,11 +14,10 @@ const JavaScriptStackModal = (props: Props) => {
                     label="JavaScript"
                     labelBold
                     contents={[
+                        '기본 데이터 타입 : Number, String 등',
                         '비동기 : Async/Await, Promise',
                         '함수 작성 : 함수 표현식',
-                        'Array 문법 : Map, ForEach, Filter, Reduce 등',
                         '호이스팅',
-                        '클로저',
                         '이벤트루프',
                     ]}
                 />

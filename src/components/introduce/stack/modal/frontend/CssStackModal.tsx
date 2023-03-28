@@ -13,7 +13,7 @@ const CssStackModal = (props: Props) => {
                 <ListItemFormControl
                     label="CSS"
                     labelBold
-                    contents={['디자인 요건에 맞는 UI 개발', 'Animation 처리 : Keyframes, Transition', 'SCSS']}
+                    contents={['디자인과 동일한 CSS 적용', 'Animation 처리', 'SCSS']}
                 />
             </List>
         </Modal>
