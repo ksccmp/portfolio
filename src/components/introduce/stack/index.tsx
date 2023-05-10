@@ -6,25 +6,26 @@ import ContentWrapper from '../../molecules/contentWrapper';
 import Dropdown from '../../molecules/drowndown';
 import TextBoxFormControl from '../../molecules/textBoxFormControl';
 
-import Ec2StackModal from './modal/aws/Ec2StackModal';
-import EcsStackModal from './modal/aws/EcsStackModal';
-import LambdaStackModal from './modal/aws/LambdaStackModal';
-import RdsStackModal from './modal/aws/RdsStackModal';
-import S3StackModal from './modal/aws/S3StackModal';
-import JpaStackModal from './modal/backend/JpaStackModal';
-import MybatisStackModal from './modal/backend/MybatisStackModal';
-import SpringBootStackModal from './modal/backend/SpringBootStackModal';
-import ConfluenceStackModal from './modal/devops/ConfluenceStackModal';
-import DockerStackModal from './modal/devops/DockerStackModal';
-import GitLabStackModal from './modal/devops/GitLabStackModal';
-import JenkinsStackModal from './modal/devops/JenkinsStackModal';
-import JiraStackModal from './modal/devops/JiraStackModal';
-import CssStackModal from './modal/frontend/CssStackModal';
-import HtmlStackModal from './modal/frontend/HtmlStackModal';
-import JavaScriptStackModal from './modal/frontend/JavaScriptStackModal';
-import NextStackModal from './modal/frontend/NextStackModal';
-import ReactStackModal from './modal/frontend/ReactStackModal';
-import TypeScriptStackModal from './modal/frontend/TypeScriptStackModal';
+import CloudFrontStackModal from './modal/aws/cloudFrontStackModal';
+import Ec2StackModal from './modal/aws/ec2StackModal';
+import EcsStackModal from './modal/aws/ecsStackModal';
+import LambdaStackModal from './modal/aws/lambdaStackModal';
+import RdsStackModal from './modal/aws/rdsStackModal';
+import S3StackModal from './modal/aws/s3StackModal';
+import JpaStackModal from './modal/backend/jpaStackModal';
+import MybatisStackModal from './modal/backend/mybatisStackModal';
+import SpringBootStackModal from './modal/backend/springBootStackModal';
+import ConfluenceStackModal from './modal/devops/confluenceStackModal';
+import DockerStackModal from './modal/devops/dockerStackModal';
+import GitLabStackModal from './modal/devops/gitLabStackModal';
+import JenkinsStackModal from './modal/devops/jenkinsStackModal';
+import JiraStackModal from './modal/devops/jiraStackModal';
+import CssStackModal from './modal/frontend/cssStackModal';
+import HtmlStackModal from './modal/frontend/htmlStackModal';
+import JavaScriptStackModal from './modal/frontend/javaScriptStackModal';
+import NextStackModal from './modal/frontend/nextStackModal';
+import ReactStackModal from './modal/frontend/reactStackModal';
+import TypeScriptStackModal from './modal/frontend/typeScriptStackModal';
 
 const Stack = () => {
     // FrontEnd
@@ -53,6 +54,7 @@ const Stack = () => {
     const ECS_STACK_MODAL = 'ECS_STACK_MODAL';
     const S3_STACK_MODAL = 'S3_STACK_MODAL';
     const RDS_STACK_MODAL = 'RDS_STACK_MODAL';
+    const CLOUDFRONT_STACK_MODAL = 'CLOUDFRONT_STACK_MODAL';
 
     /**
      * customHook
@@ -98,6 +100,7 @@ const Stack = () => {
                         <TextBoxFormControl label="ECS" onClick={() => useModal.open(ECS_STACK_MODAL)} />
                         <TextBoxFormControl label="S3" onClick={() => useModal.open(S3_STACK_MODAL)} />
                         <TextBoxFormControl label="RDS" onClick={() => useModal.open(RDS_STACK_MODAL)} />
+                        <TextBoxFormControl label="CloudFront" onClick={() => useModal.open(CLOUDFRONT_STACK_MODAL)} />
                     </Container>
                 </Dropdown>
             </ContentWrapper>
@@ -148,6 +151,9 @@ const Stack = () => {
             {useModal.isOpen(ECS_STACK_MODAL) && <EcsStackModal onClose={() => useModal.close(ECS_STACK_MODAL)} />}
             {useModal.isOpen(S3_STACK_MODAL) && <S3StackModal onClose={() => useModal.close(S3_STACK_MODAL)} />}
             {useModal.isOpen(RDS_STACK_MODAL) && <RdsStackModal onClose={() => useModal.close(RDS_STACK_MODAL)} />}
+            {useModal.isOpen(CLOUDFRONT_STACK_MODAL) && (
+                <CloudFrontStackModal onClose={() => useModal.close(CLOUDFRONT_STACK_MODAL)} />
+            )}
         </>
     );
 };
