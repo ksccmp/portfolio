@@ -13,7 +13,7 @@ const LambdaStackModal = (props: Props) => {
                 <ListItemFormControl
                     label="Lambda"
                     labelBold
-                    contents={['배치서버 : CloudWatch Logs', '자동화 : GitLab CI']}
+                    contents={['배치서버 : CloudWatch Logs', 'API서버 : API Gateway', '자동화 : GitLab CI']}
                 />
             </List>
         </Modal>
