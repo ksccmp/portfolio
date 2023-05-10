@@ -19,7 +19,7 @@ const NextStackModal = (props: Props) => {
                         '컴포넌트 디자인 : Atomic Design',
                         '컴포넌트 문서화 : Storybook',
                         '렌더링 : CSR, SSR, SSG, Dynamic Routes, ISR',
-                        'SEO : 이미지 Alt, Meta Tag',
+                        'SEO : 이미지 Alt, Meta Tag 등',
                         '상태관리 : Recoil, Redux',
                         '서버 상태관리 : useQuery',
                         'CSS : Emotion, StyledComponents',
