@@ -16,7 +16,7 @@ const GitLabStackModal = (props: Props) => {
                     contents={[
                         'Branch 전략 : Master, Develop, Feature 등',
                         'Commit 컨벤션 : Feat, Fix, Rename, Chore 등',
-                        '코드리뷰 : GitLab MR, GitHub PR',
+                        '코드리뷰 : GitLab MR',
                         'CI/CD 파이프라인 : GitLab CI, GitLab Runner',
                     ]}
                 />
